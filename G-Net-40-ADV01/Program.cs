@@ -435,7 +435,66 @@ namespace G_Net_40_ADV01
             //Console.WriteLine(safeList.GetValueAt(3));
             #endregion
 
+            #region Question 15
+
+            // Q15: What is covariance? Explain the 'out' keyword.
+
+
+            //Answer Q15:
+
+            // Covariance (out keyword):
+            // Covariance allows you to use a more derived type than originally specified.
+            // Marked with out keyword.
+            // T can only appear in output positions.
+
+            // Example:
+
+   
+        //  class Animal
+        //{
+        //    public string Name { get; set; }
+        //    public Animal(string name) => Name = name;
+        //    public virtual void Speak() => Console.WriteLine($"{Name} makes a sound...");
+        //}
+
+        //class Dog : Animal
+        //{
+        //    public Dog() : base("Dog") { }
+        //    public Dog(string name) : base(name) { }
+        //    public override void Speak() => Console.WriteLine($"{Name} says: Woof! 🐶");
+        //}
+
+        //// ===== Interface =====
+        //interface IProducer<out T>
+        //{
+        //    T Produce();
+        //}
+
+        //// ===== Implementations =====
+        //class DogProducer : IProducer<Dog>
+        //{
+        //    public Dog Produce() => new Dog("Rex");
+        //}
+
+       
+        //IProducer<Dog> dogProducer = new DogProducer();
+        //Dog myDog = dogProducer.Produce();
+        //myDog.Speak();
+        
+
+        ////  Covariance — IProducer<Dog> assigned to IProducer<Animal>
+        //IProducer<Animal> producer = new DogProducer(); //  Covariance
+        //Animal myAnimal = producer.Produce();
+        //myAnimal.Speak();
+        //// Output: Rex says: Woof! 🐶
+
+        //// بدون covariance كان هيحصل error
+        //// IProducer<Animal> x = new DogProducer(); // لو مكتبناش out
+            #endregion
+
+
+
 
         }
-    }
+}
 }
