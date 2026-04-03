@@ -2,6 +2,7 @@
 using System.Numerics;
 using System.Reflection.Metadata;
 using System.Security.Principal;
+using G_Net_40_ADV01.Default_Key_Word;
 using G_Net_40_ADV01.Genaric_Class;
 using G_Net_40_ADV01.Genaric_Interface;
 using G_Net_40_ADV01.Genaric_Method;
@@ -418,6 +419,21 @@ namespace G_Net_40_ADV01
             //  Use default when you need to initialize or return a "zero" value without knowing the type.
             #endregion
 
+
+            #region Question 14
+
+            // Q14: Write a SafeList<T> that returns default when the index is invalid.
+
+            // Answer Q14:
+
+            //SafeList<int> safeList = new SafeList<int>();
+
+            //safeList.Add(1);
+            //safeList.Add(40);
+            //safeList.Add(44);
+
+            //Console.WriteLine(safeList.GetValueAt(3));
+            #endregion
 
 
         }
