@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Numerics;
 using System.Reflection.Metadata;
+using G_Net_40_ADV01.Genaric_Class;
 using G_Net_40_ADV01.Genaric_Method;
 using G_Net_40_ADV01.Pair_Genaic_Class;
 
@@ -171,6 +172,27 @@ namespace G_Net_40_ADV01
 
             //Console.WriteLine($"name01 = {name01}");
             //Console.WriteLine($"name02 = {name02}");
+            #endregion
+
+            #region Question 05
+
+            //Q5: Write a generic method FindMax<T> that finds maximum value
+
+            //Answer Q5:
+
+            //int[] numbers = { 11, 22, 33, 4, 54, 60, 7, 81, };
+
+            //Console.WriteLine(Utilities.FindMaxValue(numbers));
+            //-----------------------------------------------------------------------------------------
+            //Developer[] developers =
+            //{
+            //    new("Islam",9000),
+            //    new("ALi",10000),
+            //    new("Youssef",15000)
+            //};
+
+            //Console.WriteLine(Utilities.FindMaxValue(developers));
+
             #endregion
 
 
