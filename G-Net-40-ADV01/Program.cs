@@ -5,6 +5,7 @@ using G_Net_40_ADV01.Genaric_Class;
 using G_Net_40_ADV01.Genaric_Interface;
 using G_Net_40_ADV01.Genaric_Method;
 using G_Net_40_ADV01.Generic_Constraints;
+using G_Net_40_ADV01.Generic_Constraints.Interface_Constrain;
 using G_Net_40_ADV01.Generic_Constraints.New__;
 using G_Net_40_ADV01.Pair_Genaic_Class;
 
@@ -301,21 +302,51 @@ namespace G_Net_40_ADV01
 
             // Apply Example Of Constraint: new() (Constructor)
 
-           // People person01 = new People(1,"ali");
+            // People person01 = new People(1,"ali");
 
-          //  People person02 = new();
+            //  People person02 = new();
 
             // this is invalid Because the Type of People That use ConstrainParameterlessConstructor
             // do not have a paramaterless constrain 
 
-           //   var  constrainParameterlessConstructor1 = new ConstrainParameterlessConstructor<People>();  
+            //   var  constrainParameterlessConstructor1 = new ConstrainParameterlessConstructor<People>();  
 
 
 
             // if i create A parameterless constrain or remove my custom constrain this will work
 
 
-           // var constrainParameterlessConstructor2 = new ConstrainParameterlessConstructor<People>();
+            // var constrainParameterlessConstructor2 = new ConstrainParameterlessConstructor<People>();
+            #endregion
+
+            #region Question 10
+
+            // Q10:  What is the interface constraint? Write an example.
+
+            //Answer Q10
+
+            // Constraint: Interface:
+            // where T : IInterface requires T to implement a specific interface.
+            // This enables calling interface methods on type parameter.
+
+            // where T : IInterface => T must implement interface
+
+            //Apply Example about Constraint: Interface:
+
+            // Usage of Sorter<T>
+
+            //  Sort integers
+            //var intSorter = new Sorter<int>();
+            //int[] numbers = { 5, 2, 9, 1, 7, 3 };
+            //int[] sortedNumbers = intSorter.Sort(numbers);
+            //Console.WriteLine("Sorted ints: " + string.Join(", ", sortedNumbers));
+
+            ////  Sort strings
+            //var stringSorter = new Sorter<string>();
+            //string[] names = { "Ziad", "Ahmed", "Mohamed", "Bassem" };
+            //string[] sortedNames = stringSorter.Sort(names);
+            //Console.WriteLine("Sorted strings: " + string.Join(", ", sortedNames));
+           
             #endregion
 
 
