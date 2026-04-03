@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Data.Common;
 using System.Numerics;
 using System.Reflection.Metadata;
 using System.Security.Principal;
@@ -506,48 +507,85 @@ namespace G_Net_40_ADV01
             //Example:
 
 
-        //class Animal
-        //{
-        //    public string Name { get; set; }
-        //    public Animal(string name) => Name = name;
-        //    public virtual void Speak() => Console.WriteLine($"{Name} makes a sound...");
-        //}
+            //class Animal
+            //{
+            //    public string Name { get; set; }
+            //    public Animal(string name) => Name = name;
+            //    public virtual void Speak() => Console.WriteLine($"{Name} makes a sound...");
+            //}
 
-        //class Dog : Animal
-        //{
-        //    public Dog() : base("Dog") { }
-        //    public Dog(string name) : base(name) { }
-        //    public override void Speak() => Console.WriteLine($"{Name} says: Woof! 🐶");
-        //}
+            //class Dog : Animal
+            //{
+            //    public Dog() : base("Dog") { }
+            //    public Dog(string name) : base(name) { }
+            //    public override void Speak() => Console.WriteLine($"{Name} says: Woof! 🐶");
+            //}
 
-        //interface IConsumer<in T>
-        //{
-        //    void Consume(T item);
-        //}
-
-    
-        //class AnimalConsumer : IConsumer<Animal>
-        //{
-        //    public void Consume(Animal a) => Console.WriteLine($"Consuming animal: {a.Name}");
-        //}
-
-     
-        //// usage
-        //IConsumer<Animal> animalConsumer = new AnimalConsumer();
-        //animalConsumer.Consume(new Animal("Cat"));
+            //interface IConsumer<in T>
+            //{
+            //    void Consume(T item);
+            //}
 
 
-        ////  Contravariance — IConsumer<Animal> assigned to IConsumer<Dog>
-        //IConsumer<Dog> dogConsumer = new AnimalConsumer(); //  Contravariance
-        //        dogConsumer.Consume(new Dog("Rex"));
-        
-        
-        ////  بدون contravariance كان هيحصل error
-        //// IConsumer<Dog> x = new AnimalConsumer(); //  لو مكتبناش in
+            //class AnimalConsumer : IConsumer<Animal>
+            //{
+            //    public void Consume(Animal a) => Console.WriteLine($"Consuming animal: {a.Name}");
+            //}
+
+
+            //// usage
+            //IConsumer<Animal> animalConsumer = new AnimalConsumer();
+            //animalConsumer.Consume(new Animal("Cat"));
+
+
+            ////  Contravariance — IConsumer<Animal> assigned to IConsumer<Dog>
+            //IConsumer<Dog> dogConsumer = new AnimalConsumer(); //  Contravariance
+            //        dogConsumer.Consume(new Dog("Rex"));
+
+
+            ////  بدون contravariance كان هيحصل error
+            //// IConsumer<Dog> x = new AnimalConsumer(); //  لو مكتبناش in
             #endregion
 
 
+            #region Question 17
 
+            // Q17: What is the difference between covariance and contravariance?
+
+            //Answer Q17
+
+            // Aspect :            Covariance(out)           -       Contravariance(in)
+            // Direction :         Derived → Base            -       Base → Derived
+            // T Position :        Output only(return)	     -       Input only(parameter)
+            // Example :           IEnumerable<out T>        -       Action<in T>
+            // Think of as :       Producer of T             -       Consumer of T
+
+
+            // Covariance(out)
+            //Definition: Allows you to use a more derived(child) type than originally specified.
+            //Direction: Same direction as inheritance.
+            //Keyword in C#: out
+            //Usage: Typically used in return types only.
+
+            // Example:
+
+            //IEnumerable<string> strings = new List<string>();
+            //IEnumerable<object> objects = strings; // Valid بسبب covariance
+
+            //----------------------------------------------------------------------------------------------------
+
+
+            // Contravariance(in)
+            // Definition: Allows you to use a more base(parent) type than originally specified.
+            // Direction: Opposite direction of inheritance.
+            // Keyword in C#: in
+            // Usage: Typically used in input parameters only.
+
+            //  Example:
+
+           // Action<object> actObject = (obj) => Console.WriteLine(obj);
+           // Action<string> actString = actObject; // ✅ Valid بسبب contravariance
+            #endregion
         }
-}
+    }
 }
