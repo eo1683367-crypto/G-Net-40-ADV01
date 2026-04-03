@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Numerics;
 using System.Reflection.Metadata;
+using System.Security.Principal;
 using G_Net_40_ADV01.Genaric_Class;
 using G_Net_40_ADV01.Genaric_Interface;
 using G_Net_40_ADV01.Genaric_Method;
@@ -380,7 +381,31 @@ namespace G_Net_40_ADV01
             //DogShelter.MakeSound();
             #endregion
 
+            #region Question 12
 
+            // Q12: How do you apply multiple constraints? Write an example. 
+
+            // Answer Q12:
+
+            // Multiple Constraints :
+            // You can combine multiple constraints for a single type parameter,
+            // and have different constraints for different type parameters.
+
+            // example:
+
+            //    public class EntityManager<T> where T : class, IEntity, new()
+            //    {
+            //    public T CreateAndSave()
+            //    {
+            //        var entity = new T();      //  new() constraint
+            //        entity.Id = Guid.NewGuid(); //  IEntity constraint
+            //        return entity;
+            //    }
+            //    }
+           
+            // Order matters: class/struct first, then interfaces, then new() last!
+
+            #endregion
         }
     }
 }
