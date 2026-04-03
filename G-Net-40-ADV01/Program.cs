@@ -5,6 +5,7 @@ using G_Net_40_ADV01.Genaric_Class;
 using G_Net_40_ADV01.Genaric_Interface;
 using G_Net_40_ADV01.Genaric_Method;
 using G_Net_40_ADV01.Generic_Constraints;
+using G_Net_40_ADV01.Generic_Constraints.New__;
 using G_Net_40_ADV01.Pair_Genaic_Class;
 
 namespace G_Net_40_ADV01
@@ -285,6 +286,37 @@ namespace G_Net_40_ADV01
 
             #endregion
 
+
+            #region Question 09
+
+            // Q9: What is the 'new()' constraint? Write an example.
+
+            // Answer Q9:
+
+            // Constraint: new() (Constructor):
+            // where T : new() requires T to have a public parameterless constructor.
+            // This allows you to create instances of T inside the generic code.
+
+            //  where T : new () =>  T must have parameterless constructor
+
+            // Apply Example Of Constraint: new() (Constructor)
+
+           // People person01 = new People(1,"ali");
+
+          //  People person02 = new();
+
+            // this is invalid Because the Type of People That use ConstrainParameterlessConstructor
+            // do not have a paramaterless constrain 
+
+           //   var  constrainParameterlessConstructor1 = new ConstrainParameterlessConstructor<People>();  
+
+
+
+            // if i create A parameterless constrain or remove my custom constrain this will work
+
+
+           // var constrainParameterlessConstructor2 = new ConstrainParameterlessConstructor<People>();
+            #endregion
 
 
         }
