@@ -4,6 +4,7 @@ using System.Reflection.Metadata;
 using G_Net_40_ADV01.Genaric_Class;
 using G_Net_40_ADV01.Genaric_Interface;
 using G_Net_40_ADV01.Genaric_Method;
+using G_Net_40_ADV01.Generic_Constraints;
 using G_Net_40_ADV01.Pair_Genaic_Class;
 
 namespace G_Net_40_ADV01
@@ -247,6 +248,23 @@ namespace G_Net_40_ADV01
             //}
             #endregion
 
+
+            #region Question 07
+            // Q7: What is the 'struct' constraint? Write an example.
+
+            //Answer Q7:
+
+            // Constraint: struct (Value Types):
+            // where T : struct restricts T to value types only.
+            // Useful when you need value semantics (copy, no null).
+
+            // where T : struct => T must be a value type
+
+            // Apply Constraint: struct 
+
+            // var box = new ConstraintStruct<int> { Value = 42 }; // valid int is value type
+            // new ConstraintStruct<string>(); //  Error - string is reference type
+            #endregion
 
 
 
