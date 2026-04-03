@@ -402,10 +402,24 @@ namespace G_Net_40_ADV01
             //        return entity;
             //    }
             //    }
-           
+
             // Order matters: class/struct first, then interfaces, then new() last!
 
             #endregion
+
+            #region Question 13
+            // Q13: What does the 'default' keyword do in generics?
+
+            // Answer Q13:
+
+            // The default Keyword:
+            // default(T) or default returns the default value for type T: null for reference types, 0/false for value types.
+
+            //  Use default when you need to initialize or return a "zero" value without knowing the type.
+            #endregion
+
+
+
         }
     }
 }
