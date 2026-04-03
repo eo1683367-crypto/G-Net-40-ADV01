@@ -4,6 +4,7 @@ using System.Numerics;
 using System.Reflection.Metadata;
 using System.Security.Principal;
 using G_Net_40_ADV01.Default_Key_Word;
+using G_Net_40_ADV01.Final_Exercise_Q20;
 using G_Net_40_ADV01.Genaric_Class;
 using G_Net_40_ADV01.Genaric_Interface;
 using G_Net_40_ADV01.Genaric_Method;
@@ -670,6 +671,32 @@ namespace G_Net_40_ADV01
             //}
 
             // مجرد تغيير اسم (T → U) لكن نفس الفكرة
+            #endregion
+
+            #region Question 20
+
+            // Q20: Complete Exercise - Create a generic Cache<TKey, TValue>with Add, Get, Remove, Contains,
+            // and expiration support. 
+
+            // Answer Q20:
+
+           //var cache = new Cache<string, string>();
+
+           //cache.Add("name",  "Ahmed",  seconds: 5);
+           //cache.Add("city",  "Cairo",  seconds: 2);
+           
+           //cache.Get("name");                                        // Ahmed
+           //cache.Get("city");                                        // Cairo
+           //cache.Get("age");                                         // Not Found
+           
+           //Console.WriteLine($"Contains name: {cache.Contains("name")}"); // True
+           
+           //cache.Remove("name");
+           //cache.Get("name");                                        // Not Found
+           
+           //Console.WriteLine("Waiting 3 seconds...");
+           //Thread.Sleep(3000);
+           //cache.Get("city");                                        // Expired!
             #endregion
         }
     }
