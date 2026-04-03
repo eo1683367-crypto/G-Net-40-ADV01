@@ -5,6 +5,7 @@ using G_Net_40_ADV01.Genaric_Class;
 using G_Net_40_ADV01.Genaric_Interface;
 using G_Net_40_ADV01.Genaric_Method;
 using G_Net_40_ADV01.Generic_Constraints;
+using G_Net_40_ADV01.Generic_Constraints.Base_Class_Constrain;
 using G_Net_40_ADV01.Generic_Constraints.Interface_Constrain;
 using G_Net_40_ADV01.Generic_Constraints.New__;
 using G_Net_40_ADV01.Pair_Genaic_Class;
@@ -346,7 +347,37 @@ namespace G_Net_40_ADV01
             //string[] names = { "Ziad", "Ahmed", "Mohamed", "Bassem" };
             //string[] sortedNames = stringSorter.Sort(names);
             //Console.WriteLine("Sorted strings: " + string.Join(", ", sortedNames));
-           
+
+            #endregion
+
+            #region Question 11
+
+            // Q11: What is the base class constraint? Write an example.
+
+            //Answer Q11:
+
+            // where T : BaseClass => T must inherit from BaseClass
+
+            //Apply Example about  base class constraint
+
+
+            //Cat cat01 = new Cat("Cat01");
+
+            //AnimalShelter<Cat> CatShelter = new AnimalShelter<Cat>();
+
+            //CatShelter.AddAnimal(cat01);
+
+            //CatShelter.MakeSound();
+
+            ////-----------------------------------------------------------------
+
+            //Dog dog01 = new Dog("Dot01");
+
+            //AnimalShelter<Dog> DogShelter = new AnimalShelter<Dog>();
+
+            //DogShelter.AddAnimal(dog01);
+
+            //DogShelter.MakeSound();
             #endregion
 
 
