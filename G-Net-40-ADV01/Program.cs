@@ -449,8 +449,64 @@ namespace G_Net_40_ADV01
 
             // Example:
 
-   
-        //  class Animal
+
+            //  class Animal
+            //{
+            //    public string Name { get; set; }
+            //    public Animal(string name) => Name = name;
+            //    public virtual void Speak() => Console.WriteLine($"{Name} makes a sound...");
+            //}
+
+            //class Dog : Animal
+            //{
+            //    public Dog() : base("Dog") { }
+            //    public Dog(string name) : base(name) { }
+            //    public override void Speak() => Console.WriteLine($"{Name} says: Woof! 🐶");
+            //}
+
+            //// ===== Interface =====
+            //interface IProducer<out T>
+            //{
+            //    T Produce();
+            //}
+
+            //// ===== Implementations =====
+            //class DogProducer : IProducer<Dog>
+            //{
+            //    public Dog Produce() => new Dog("Rex");
+            //}
+
+
+            //IProducer<Dog> dogProducer = new DogProducer();
+            //Dog myDog = dogProducer.Produce();
+            //myDog.Speak();
+
+
+            ////  Covariance — IProducer<Dog> assigned to IProducer<Animal>
+            //IProducer<Animal> producer = new DogProducer(); //  Covariance
+            //Animal myAnimal = producer.Produce();
+            //myAnimal.Speak();
+            //// Output: Rex says: Woof! 🐶
+
+            //// بدون covariance كان هيحصل error
+            //// IProducer<Animal> x = new DogProducer(); // لو مكتبناش out
+            #endregion
+
+
+            #region Question 16
+
+            // Q16: What is contravariance? Explain the 'in' keyword.
+
+            // Answer Q16:
+
+            // Contravariance (in keyword):
+            // Contravariance allows you to use a less derived type than originally specified.
+            // Marked with in keyword. T can only appear in input positions.
+
+            //Example:
+
+
+        //class Animal
         //{
         //    public string Name { get; set; }
         //    public Animal(string name) => Name = name;
@@ -464,34 +520,31 @@ namespace G_Net_40_ADV01
         //    public override void Speak() => Console.WriteLine($"{Name} says: Woof! 🐶");
         //}
 
-        //// ===== Interface =====
-        //interface IProducer<out T>
+        //interface IConsumer<in T>
         //{
-        //    T Produce();
+        //    void Consume(T item);
         //}
 
-        //// ===== Implementations =====
-        //class DogProducer : IProducer<Dog>
+    
+        //class AnimalConsumer : IConsumer<Animal>
         //{
-        //    public Dog Produce() => new Dog("Rex");
+        //    public void Consume(Animal a) => Console.WriteLine($"Consuming animal: {a.Name}");
         //}
 
-       
-        //IProducer<Dog> dogProducer = new DogProducer();
-        //Dog myDog = dogProducer.Produce();
-        //myDog.Speak();
+     
+        //// usage
+        //IConsumer<Animal> animalConsumer = new AnimalConsumer();
+        //animalConsumer.Consume(new Animal("Cat"));
+
+
+        ////  Contravariance — IConsumer<Animal> assigned to IConsumer<Dog>
+        //IConsumer<Dog> dogConsumer = new AnimalConsumer(); //  Contravariance
+        //        dogConsumer.Consume(new Dog("Rex"));
         
-
-        ////  Covariance — IProducer<Dog> assigned to IProducer<Animal>
-        //IProducer<Animal> producer = new DogProducer(); //  Covariance
-        //Animal myAnimal = producer.Produce();
-        //myAnimal.Speak();
-        //// Output: Rex says: Woof! 🐶
-
-        //// بدون covariance كان هيحصل error
-        //// IProducer<Animal> x = new DogProducer(); // لو مكتبناش out
+        
+        ////  بدون contravariance كان هيحصل error
+        //// IConsumer<Dog> x = new AnimalConsumer(); //  لو مكتبناش in
             #endregion
-
 
 
 
