@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Numerics;
 using System.Reflection.Metadata;
+using G_Net_40_ADV01.Genaric_Method;
 using G_Net_40_ADV01.Pair_Genaic_Class;
 
 namespace G_Net_40_ADV01
@@ -125,7 +126,52 @@ namespace G_Net_40_ADV01
             #endregion
 
 
+            #region Question 04
 
+            //Q4: What is a generic method? Write Swap<T> method.
+
+            // Answer Q4:
+            // Generic Methods:
+            // A generic method declares its own type parameter(s).
+            // It can exist in both generic and non-generic classes.
+            // The compiler often infers the type argument.
+
+
+            //Apply Swap
+
+            //int num01 = 10, num02 = 33;
+
+            //Console.WriteLine("Before Swapping");
+
+            //Console.WriteLine($"num01 = {num01}");
+            //Console.WriteLine($"num02 = {num02}");
+            //Console.WriteLine("==================================================");
+
+            //Console.WriteLine("After Swapping");
+
+            //Utilities.Swap(ref num01, ref num02); // 
+
+            //Console.WriteLine($"num01 = {num01}");
+            //Console.WriteLine($"num02 = {num02}");
+
+            //-------------------------------------------------------------------------------------------
+
+
+            //string name01 = "ahmed", name02 = "ali";
+
+            //Console.WriteLine("Before Swapping");
+
+            //Console.WriteLine($"name01 = {name01}");
+            //Console.WriteLine($"name02 = {name02}");
+            //Console.WriteLine("==================================================");
+
+            //Console.WriteLine("After Swapping");
+
+            //Utilities.Swap(ref name01, ref name02); // 
+
+            //Console.WriteLine($"name01 = {name01}");
+            //Console.WriteLine($"name02 = {name02}");
+            #endregion
 
 
         }
