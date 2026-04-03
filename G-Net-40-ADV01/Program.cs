@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Numerics;
 using System.Reflection.Metadata;
+using G_Net_40_ADV01.Pair_Genaic_Class;
 
 namespace G_Net_40_ADV01
 {
@@ -102,7 +103,26 @@ namespace G_Net_40_ADV01
             //Console.WriteLine(container01.Get(5));  // 0 (القيمة الافتراضية)
             #endregion
 
+            #region  Question 03
 
+            //Q3:What are multiple type parameters? Write Pair<TKey, TValue>.
+
+
+            //Answer Q3:
+
+            //Multiple Type Parameters:
+            //Generic classes can have multiple type parameters.
+            //Common examples: Dictionary<TKey, TValue>, Tuple<T1, T2>
+
+            // Apply Example : Pair<TKey, TValue>.
+
+            //var emp01 = new Employee<int,string>(1,"Islam");
+            //Console.WriteLine(emp01);
+            ////----------------------------------------------------
+
+            //Employee<int, string> emp02 = new(3, "Dina");
+            //Console.WriteLine(emp02);
+            #endregion
 
 
 
