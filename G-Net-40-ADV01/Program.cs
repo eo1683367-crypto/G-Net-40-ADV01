@@ -87,13 +87,27 @@ namespace G_Net_40_ADV01
             //------------------------------------------------------------------------------------------------
             #endregion
 
+            #region Question 02
+            //Q2: Write a generic class Container<T> with Add and Get methods.
+
+            //Answer Q2:
+
+            //var container01 = new G_Net_40_ADV01.Genaric_Class.Container<int>();
+
+            //container01.Add(10);
+            //container01.Add(20);
+
+            //Console.WriteLine(container01.Count);   // 2
+            //Console.WriteLine(container01.Get(0));  // 10
+            //Console.WriteLine(container01.Get(5));  // 0 (القيمة الافتراضية)
+            #endregion
 
 
 
 
 
 
-          
+
         }
     }
 }
