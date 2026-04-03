@@ -2,6 +2,7 @@
 using System.Numerics;
 using System.Reflection.Metadata;
 using G_Net_40_ADV01.Genaric_Class;
+using G_Net_40_ADV01.Genaric_Interface;
 using G_Net_40_ADV01.Genaric_Method;
 using G_Net_40_ADV01.Pair_Genaic_Class;
 
@@ -194,6 +195,59 @@ namespace G_Net_40_ADV01
             //Console.WriteLine(Utilities.FindMaxValue(developers));
 
             #endregion
+
+            #region Question 06
+
+            // Q6: What is a generic interface? Write IRepository<T>. 
+
+            //Answer Q6:
+
+            // Generic Interfaces:
+            // Generic interfaces define contracts with type parameters.
+            // Classes implementing them specify the actual types.
+
+            // Apply Genaric Interface
+
+            //var prod01 = new G_Net_40_ADV01.Genaric_Interface.Product(111, "Iphone12Pro", 20000);
+            //var prod02 = new G_Net_40_ADV01.Genaric_Interface.Product(144, "Lap-Top", 33000);
+            //var prod03 = new G_Net_40_ADV01.Genaric_Interface.Product(100, "Note Book", 100);
+
+            //ProductRepository productRepository = new ProductRepository();
+            //productRepository.Add(prod01);
+            //productRepository.Add(prod02);
+            //productRepository.Add(prod03);
+
+            //--------------------------------------------------------------------------------------------
+
+            //foreach (var item in  productRepository.GetAll())
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //--------------------------------------------------------------------------------------------
+
+            //Console.WriteLine(productRepository.GetById(111));
+
+            //--------------------------------------------------------------------------------------------
+            //productRepository.Delete(prod01);
+
+
+            //foreach (var item in productRepository.GetAll())
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //--------------------------------------------------------------------------------------------
+
+            //productRepository.Update(new Product(100,"Pen",12));
+
+            //foreach (var item in productRepository.GetAll())
+            //{
+            //    Console.WriteLine(item);
+            //}
+            #endregion
+
+
 
 
         }
