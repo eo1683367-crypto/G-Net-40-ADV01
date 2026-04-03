@@ -583,8 +583,35 @@ namespace G_Net_40_ADV01
 
             //  Example:
 
-           // Action<object> actObject = (obj) => Console.WriteLine(obj);
-           // Action<string> actString = actObject; // ✅ Valid بسبب contravariance
+            // Action<object> actObject = (obj) => Console.WriteLine(obj);
+            // Action<string> actString = actObject; // ✅ Valid بسبب contravariance
+            #endregion
+
+            #region Question 18
+            // Q18: How do static members work in generic types?
+
+            //ANswer Q18:
+
+            // Static members in generic types behave differently per closed type (per type parameter).
+            // static في generic = one per type argument
+            // كل T = static مختلفة
+
+            // Example:
+
+            //class Cache<T>
+            //{
+            //   public static List<T> Items = new List<T>();
+            //}
+
+            //-------------------------------------------------
+
+            // Cache<int>.Items.Add(1);
+            // Cache<string>.Items.Add("Hello");
+            //
+            // Console.WriteLine(Cache<int>.Items.Count);    // 1
+            // Console.WriteLine(Cache<string>.Items.Count); // 1
+
+            // كل نوع ليه cache لوحده
             #endregion
         }
     }
