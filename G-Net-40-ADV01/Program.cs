@@ -266,6 +266,25 @@ namespace G_Net_40_ADV01
             // new ConstraintStruct<string>(); //  Error - string is reference type
             #endregion
 
+            #region Question 08
+
+            // Q8: What is the 'class' constraint? Write an example.
+
+            //Answer Q8:
+            // Constraint: class (Reference Types):
+            // where T : class restricts T to reference types only.
+            // This allows T to be null and enables reference comparison.
+
+            // where T : class => T must be a reference type
+
+            //Appy Example about 'class' constraint:
+
+            //var ConstrainClass = new ConstrainClass<string>();  //  string is class
+            //ConstrainClass.Set("Hello");
+            //// var bad = new ConstrainClass<int>();      //  int is struct!
+
+            #endregion
+
 
 
         }
