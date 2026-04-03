@@ -613,6 +613,64 @@ namespace G_Net_40_ADV01
 
             // كل نوع ليه cache لوحده
             #endregion
+
+            #region Question 19
+
+            // Q19: How can you inherit from a generic class?
+
+            // Answer Q19:
+
+            // You can inherit from a generic class in more than one way,
+            // depending on whether you want the child class to stay generic or become specific.
+
+            // 1. Inherit and keep it generic
+            //    class BaseClass<T>
+            // {
+            //    public T Value;
+            // }
+
+            // class DerivedClass<T> : BaseClass<T>
+            // {
+            //    public void Show()
+            //    {
+            //        Console.WriteLine(Value);
+            //    }
+            // }
+
+            // DerivedClass<T> بيمرر نفس الـ T للـ base class
+
+            //------------------------------------------------------------------------------------------------
+
+            // 2.Inherit and specify a concrete type
+
+            //    class BaseClass<T>
+            //{
+            //    public T Value;
+            //}
+
+            //class IntClass : BaseClass<int>
+            //{
+            //}
+
+            // هنا:
+            // T اتحولت لـ int
+            // الكلاس بقى مش generic
+
+            //------------------------------------------------------------------------------------------------
+
+            // 3. Inherit with a different generic parameter
+
+            //    class BaseClass<T>
+            //{
+            //    public T Value;
+            //}
+
+            //class DerivedClass<U> : BaseClass<U>
+            //{
+            //}
+
+            // مجرد تغيير اسم (T → U) لكن نفس الفكرة
+            #endregion
         }
     }
 }
